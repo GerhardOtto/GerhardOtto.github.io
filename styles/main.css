@@ -114,3 +114,30 @@ li{
     padding: 0.5em 1em;
     border-radius: 5px;
 }
+
+.card--work-history{
+    border-left: 1px solid var(--mainBorderColor);
+    margin-top: 3em;
+    margin-bottom: 3em;
+    padding-left: 2em;
+}
+
+.line-break{
+    background-color: var(--mainBorderColor);
+    height: 1px;
+}
+
+.card--project{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-top: 1px solid var(--mainBorderColor);
+}
+
+.card--project a{
+    color: var(--mainTextColor);
+    transition: 0.3s;
+}
+
+.card--project a:hover{
+    color: var(--mainLinkColor);
+}
