@@ -109,6 +109,16 @@ li{
     font-size: 0.9em;
 }
 
+#email {
+    color: var(--mainTextColor);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#email:hover {
+    color: var(--mainLinkColor);
+}
+
 .card--techstack{
     border: 1px solid var(--mainBorderColor);
     padding: 0.5em 1em;
