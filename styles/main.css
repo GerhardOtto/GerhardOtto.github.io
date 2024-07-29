@@ -50,11 +50,6 @@ li{
     margin: 0 auto;
 }
 
-.section--page{
-    padding-top: 1em;
-    padding-bottom: 1em;
-}
-
 #wrapper--hero{
     display: flex;
     align-items: center;
@@ -119,6 +114,15 @@ li{
     color: var(--mainLinkColor);
 }
 
+.section--page{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
 .card--techstack{
     border: 1px solid var(--mainBorderColor);
     padding: 0.5em 1em;
@@ -152,6 +156,13 @@ li{
     color: var(--mainLinkColor);
 }
 
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+
 @media(max-width:600px){
 
     .section--page{
@@ -174,3 +185,9 @@ li{
         padding-left: 0;
     }
 }
+
+/*@media (prefers-reduced-motion) {*/
+/*    .hidden{*/
+/*        transition: none;*/
+/*    }*/
+/*}*/

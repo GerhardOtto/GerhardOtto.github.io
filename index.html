@@ -17,7 +17,7 @@
             <div>
                 <h1 id="user-name">Gerhard Otto</h1>
                 <p id="bio">
-                    Currently studying for a BSc in Information Technology at <a href="https://www.nwu.ac.za/" target="_blank">North-West University</a>, with a previously acquired BCom in Economics with International Trade from <a href="https://www.nwu.ac.za/" target="_blank">North-West University</a>.
+                    Currently studying for a BSc. in Information Technology at <a href="https://www.nwu.ac.za/" target="_blank">North-West University</a>, with a previously acquired BCom. in Economics with International Trade from <a href="https://www.nwu.ac.za/" target="_blank">North-West University</a>.
                     In my free time I enjoy open water swimming, trail and road running and I have been slowly getting into cycling for the full triathlon stack.
                 </p>
                 <p id="email" onclick="copyEmail()">
@@ -175,16 +175,6 @@
         </section>
 
     </div>
-
-    <script>
-        function copyEmail() {
-            const emailText = document.getElementById("email").innerText.trim();
-            navigator.clipboard.writeText(emailText).then(function() {
-                alert('Email copied to clipboard');
-            }, function(err) {
-                console.error('Could not copy text: ', err);
-            });
-        }
-    </script>
+    <script src="./app.js"></script>
 </body>
 </html>
