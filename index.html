@@ -8,7 +8,34 @@
     <link rel='stylesheet' type='text/css' media='screen' href='./styles/main.css'>
 </head>
 <body>
+    <nav id="desktop-nav">
+        <div class="logo">Gerhard Otto</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#qualifications">Qualifications</a> </li>
+                <li><a href="#tech">Tech Stack</a> </li>
+                <li><a href="#workhistory">Work History</a> </li>
+                <li><a href="#projects">Projects</a> </li>
+            </ul>
+        </div>
+    </nav>
 
+    <nav id="hamburger-nav">
+        <div class="logo">Gerhard Otto</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        <div class="menu-links">
+                <li><a href="#qualifications" onclick="toggleMenu()">Qualifications</a></li>
+                <li><a href="#tech" onclick="toggleMenu()">Tech Stack</a></li>
+                <li><a href="#workhistory" onclick="toggleMenu()">Work History</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        </div>
+        </div>
+    </nav>
     <div id="container--main">
 
         <section id="wrapper--hero" class="section--page">
