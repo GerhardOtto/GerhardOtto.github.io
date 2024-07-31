@@ -5,25 +5,21 @@ function toggleMenu(){
     icon.classList.toggle('open');
 }
 
-document.querySelectorAll('.menu-links a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+const links = document.querySelectorAll('.nav-links a, .menu-links a');
 
+links.forEach(link => {
+    link.addEventListener('click', function (event) {
+        event.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
-
-        const navBarHeight = document.querySelector('nav').offsetHeight;
-        const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+        const navHeight = document.querySelector('nav').offsetHeight;
 
         window.scrollTo({
-            top: elementPosition - navBarHeight,
+            top: targetElement.offsetTop - navHeight,
             behavior: 'smooth'
         });
-
-        toggleMenu(); // Close the menu after clicking
     });
 });
-
 
 
 document.addEventListener('DOMContentLoaded', (event) => {

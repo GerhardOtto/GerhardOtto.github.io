@@ -234,6 +234,19 @@ nav, .nav-links{
     transition: all 1s;
 }
 
+.section--page h2 {
+    /*position: -webkit-sticky; !* For Safari *!*/
+    position: sticky;
+    top: 17vh; /* Adjust this value to match your nav bar height */
+    background-color: var(--mainBgColor); /* Ensure it matches your background */
+    z-index: 1000;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+}
+
+
 .card--techstack{
     border: 1px solid var(--mainBorderColor);
     padding: 0.5em 1em;
