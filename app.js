@@ -5,6 +5,27 @@ function toggleMenu(){
     icon.classList.toggle('open');
 }
 
+document.querySelectorAll('.menu-links a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        const navBarHeight = document.querySelector('nav').offsetHeight;
+        const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+
+        window.scrollTo({
+            top: elementPosition - navBarHeight,
+            behavior: 'smooth'
+        });
+
+        toggleMenu(); // Close the menu after clicking
+    });
+});
+
+
+
 document.addEventListener('DOMContentLoaded', (event) => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
