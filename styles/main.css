@@ -74,10 +74,9 @@ nav, .nav-links{
 
 #container--main {
     max-width: 700px;
-    margin: 0 auto; /* Center content */
-    margin-top: 17vh; /* Ensure enough margin to clear the nav bar */
-    padding-left: 15px; /* Add padding to ensure content doesn't touch the edges */
-    padding-right: 15px; /* Add padding to ensure content doesn't touch the edges */
+    margin-top: 17vh;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 #wrapper--hero{
@@ -316,6 +315,10 @@ nav, .nav-links{
         padding-left: 0;
     }
 
+    .section--page h2 {
+        top: 5vh;
+    }
+
     nav{
         height: 10vh;
         padding: 0 1rem; /* Add padding for mobile view */
@@ -327,11 +330,11 @@ nav, .nav-links{
         padding-right: 15px;
     }
 
-        #desktop-nav{
+    #desktop-nav{
             display: none;
         }
 
-        #hamburger-nav{
+    #hamburger-nav{
             display: flex;
         }
 }
@@ -350,5 +353,9 @@ nav, .nav-links{
         margin-top: 10vh;
         padding-left: 15px;
         padding-right: 15px;
+    }
+
+    .section--page h2 {
+        top: 10vh;
     }
 }
