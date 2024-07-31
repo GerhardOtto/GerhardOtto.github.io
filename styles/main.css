@@ -49,10 +49,17 @@ html{
     scroll-behavior: smooth;
 }
 
-nav{
-    justify-content: space-around;
+nav {
+    justify-content: space-between; /* Adjust alignment */
     align-items: center;
-    height:17vh;
+    height: 17vh;
+    position: fixed;
+    width: 100%; /* Change width to 100% to ensure it spans the entire width */
+    z-index: 1000;
+    top: 0;
+    background-color: var(--mainBgColor);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+    padding: 0 2rem; /* Add padding to keep content away from the edges */
 }
 
 .nav-links{
@@ -65,9 +72,12 @@ nav, .nav-links{
     display: flex;
 }
 
-#container--main{
+#container--main {
     max-width: 700px;
-    margin: 0 auto;
+    margin: 0 auto; /* Center content */
+    margin-top: 17vh; /* Ensure enough margin to clear the nav bar */
+    padding-left: 15px; /* Add padding to ensure content doesn't touch the edges */
+    padding-right: 15px; /* Add padding to ensure content doesn't touch the edges */
 }
 
 #wrapper--hero{
@@ -161,7 +171,7 @@ nav, .nav-links{
 }
 
 .menu-links{
-    position: relative;
+    position: absolute;
     top: 100%;
     right: 0;
     background-color: var(--mainBgColor);
@@ -271,7 +281,7 @@ nav, .nav-links{
     cursor: default;
 }
 
-@media(max-width:600px){
+@media (max-width:600px){
 
     .section--page{
         padding-top: 1em;
@@ -292,16 +302,40 @@ nav, .nav-links{
         border-left: none;
         padding-left: 0;
     }
-}
 
-@media screen and (max-width: 1200px) {
-
-    #desktop-nav{
-        display: none;
+    nav{
+        height: 10vh;
+        padding: 0 1rem; /* Add padding for mobile view */
     }
 
-    #hamburger-nav{
-        display: flex;
+    #container--main {
+        margin-top: 10vh;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
+        #desktop-nav{
+            display: none;
+        }
+
+        #hamburger-nav{
+            display: flex;
+        }
 }
+
+/*@media screen and (max-width: 1200px) {*/
+
+/*    #desktop-nav{*/
+/*        display: none;*/
+/*    }*/
+
+/*    #hamburger-nav{*/
+/*        display: flex;*/
+/*    }*/
+
+/*    #container--main {*/
+/*        margin-top: 10vh;*/
+/*        padding-left: 15px;*/
+/*        padding-right: 15px;*/
+/*    }*/
+/*}*/
