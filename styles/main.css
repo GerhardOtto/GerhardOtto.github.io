@@ -336,19 +336,19 @@ nav, .nav-links{
         }
 }
 
-/*@media screen and (max-width: 1200px) {*/
+@media screen and (max-width: 1200px) {
 
-/*    #desktop-nav{*/
-/*        display: none;*/
-/*    }*/
+    #desktop-nav{
+        display: none;
+    }
 
-/*    #hamburger-nav{*/
-/*        display: flex;*/
-/*    }*/
+    #hamburger-nav{
+        display: flex;
+    }
 
-/*    #container--main {*/
-/*        margin-top: 10vh;*/
-/*        padding-left: 15px;*/
-/*        padding-right: 15px;*/
-/*    }*/
-/*}*/
+    #container--main {
+        margin-top: 10vh;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
