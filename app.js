@@ -47,9 +47,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
         observer.observe(element);
     });
 
-    const emailElement = document.getElementById("email");
-    if (emailElement) {
-        emailElement.addEventListener('click', copyEmail);
-    }
-
 });
