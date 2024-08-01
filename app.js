@@ -47,15 +47,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         observer.observe(element);
     });
 
-    function copyEmail() {
-        const emailText = document.getElementById("email").innerText.trim();
-        navigator.clipboard.writeText(emailText).then(function() {
-            alert('Email copied to clipboard');
-        }, function(err) {
-            console.error('Could not copy text: ', err);
-        });
-    }
-
     const emailElement = document.getElementById("email");
     if (emailElement) {
         emailElement.addEventListener('click', copyEmail);
