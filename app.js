@@ -11,9 +11,17 @@ links.forEach(link => {
         event.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
-        const navHeight = window.innerWidth < 600 ? 10 : 17; // 10vh for small screens, 17vh for larger screens
-        const navHeightPx = (navHeight * window.innerHeight) / 100; // Convert vh to px
 
+        let navHeight;
+        if (window.innerWidth < 600) {
+            navHeight = 10;
+        } else if (window.innerWidth >= 600 && window.innerWidth < 1200) {
+            navHeight = 10;
+        } else {
+            navHeight = 17;
+        }
+
+        const navHeightPx = (navHeight * window.innerHeight) / 100;
         window.scrollTo({
             top: targetElement.offsetTop - navHeightPx,
             behavior: 'smooth'
