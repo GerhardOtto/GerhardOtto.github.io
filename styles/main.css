@@ -105,10 +105,17 @@ nav, .nav-links{
 }
 
 #socials--list{
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+    /*column-gap: 1em;*/
+    /*flex-wrap: wrap;*/
+
     display: flex;
-    justify-content: space-between;
-    column-gap: 1em;
     flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1em;
+    font-size: 0.9em;
+    padding: 1.5em;
 }
 
 #socials--list a{
@@ -121,16 +128,8 @@ nav, .nav-links{
     color: var(--mainLinkColor);
 }
 
-#qualifications--list{
+#qualifications--list, #techstack--list{
     list-style: none;
-}
-
-#wrapper--techstack__items{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-    font-size: 0.9em;
-    padding: 1.5em;
 }
 
 /*Hamburger*/
@@ -226,8 +225,8 @@ nav, .nav-links{
 .section--page h2 {
     /*position: -webkit-sticky; !* For Safari *!*/
     position: sticky;
-    top: 17vh; /* Adjust this value to match your nav bar height */
-    background-color: var(--mainBgColor); /* Ensure it matches your background */
+    top: 17vh;
+    background-color: var(--mainBgColor);
     z-index: 1000;
     margin: 0;
     padding: 0.5em 0;
@@ -235,8 +234,7 @@ nav, .nav-links{
     box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
 }
 
-
-.card--techstack{
+.card--socials{
     border: 1px solid var(--mainBorderColor);
     padding: 0.5em 1em;
     border-radius: 5px;
