@@ -74,11 +74,13 @@ nav, .nav-links{
 
 #container--main {
     max-width: 700px;
-    margin: 0 auto; /* Center content */
-    margin-top: 17vh; /* Ensure enough margin to clear the nav bar */
-    padding-left: 15px; /* Add padding to ensure content doesn't touch the edges */
-    padding-right: 15px; /* Add padding to ensure content doesn't touch the edges */
+    margin-top: 17vh;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;  /* Add these two lines */
+    margin-right: auto; /* to center the container */
 }
+
 
 #wrapper--hero{
     display: flex;
@@ -100,10 +102,6 @@ nav, .nav-links{
     width: 150px;
     height: 150px;
     object-fit: cover;
-}
-
-#email{
-    color:var(--mainTextColor);
 }
 
 #socials--list{
@@ -132,16 +130,7 @@ nav, .nav-links{
     flex-wrap: wrap;
     gap: 1em;
     font-size: 0.9em;
-}
-
-#email {
-    color: var(--mainTextColor);
-    cursor: pointer;
-    text-decoration: underline;
-}
-
-#email:hover {
-    color: var(--mainLinkColor);
+    padding: 1.5em;
 }
 
 /*Hamburger*/
@@ -316,24 +305,29 @@ nav, .nav-links{
         padding-left: 0;
     }
 
+    .section--page h2 {
+        top: 5vh;
+    }
+
     nav{
         height: 10vh;
-        padding: 0 1rem; /* Add padding for mobile view */
+        padding: 0 1rem;
     }
 
     #container--main {
         margin-top: 10vh;
         padding-left: 15px;
         padding-right: 15px;
+
     }
 
-        #desktop-nav{
-            display: none;
-        }
+    #desktop-nav{
+        display: none;
+    }
 
-        #hamburger-nav{
-            display: flex;
-        }
+    #hamburger-nav{
+        display: flex;
+    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -350,5 +344,14 @@ nav, .nav-links{
         margin-top: 10vh;
         padding-left: 15px;
         padding-right: 15px;
+    }
+
+    nav {
+        padding: 0 1rem;
+        height: 10vh;
+    }
+
+    .section--page h2 {
+        top: 10vh;
     }
 }

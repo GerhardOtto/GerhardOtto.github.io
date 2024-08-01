@@ -6,20 +6,29 @@ function toggleMenu(){
 }
 
 const links = document.querySelectorAll('.nav-links a, .menu-links a');
-
 links.forEach(link => {
     link.addEventListener('click', function (event) {
         event.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
-        const navHeight = document.querySelector('nav').offsetHeight;
 
+        let navHeight;
+        if (window.innerWidth < 600) {
+            navHeight = 10;
+        } else if (window.innerWidth >= 600 && window.innerWidth < 1200) {
+            navHeight = 10;
+        } else {
+            navHeight = 17;
+        }
+
+        const navHeightPx = (navHeight * window.innerHeight) / 100;
         window.scrollTo({
-            top: targetElement.offsetTop - navHeight,
+            top: targetElement.offsetTop - navHeightPx,
             behavior: 'smooth'
         });
     });
 });
+
 
 
 document.addEventListener('DOMContentLoaded', (event) => {
@@ -37,15 +46,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     hiddenElements.forEach((element) => {
         observer.observe(element);
     });
-
-    function copyEmail() {
-        const emailText = document.getElementById("email").innerText.trim();
-        navigator.clipboard.writeText(emailText).then(function() {
-            alert('Email copied to clipboard');
-        }, function(err) {
-            console.error('Could not copy text: ', err);
-        });
-    }
 
     const emailElement = document.getElementById("email");
     if (emailElement) {
