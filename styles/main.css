@@ -77,7 +77,10 @@ nav, .nav-links{
     margin-top: 17vh;
     padding-left: 15px;
     padding-right: 15px;
+    margin-left: auto;  /* Add these two lines */
+    margin-right: auto; /* to center the container */
 }
+
 
 #wrapper--hero{
     display: flex;
@@ -131,6 +134,7 @@ nav, .nav-links{
     flex-wrap: wrap;
     gap: 1em;
     font-size: 0.9em;
+    padding: 1.5em;
 }
 
 #email {
@@ -321,13 +325,14 @@ nav, .nav-links{
 
     nav{
         height: 10vh;
-        padding: 0 1rem; /* Add padding for mobile view */
+        padding: 0 1rem;
     }
 
     #container--main {
         margin-top: 10vh;
         padding-left: 15px;
         padding-right: 15px;
+
     }
 
     #desktop-nav{
@@ -353,6 +358,11 @@ nav, .nav-links{
         margin-top: 10vh;
         padding-left: 15px;
         padding-right: 15px;
+    }
+
+    nav {
+        padding: 0 1rem;
+        height: 10vh;
     }
 
     .section--page h2 {
