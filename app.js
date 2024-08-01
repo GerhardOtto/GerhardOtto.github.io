@@ -6,20 +6,21 @@ function toggleMenu(){
 }
 
 const links = document.querySelectorAll('.nav-links a, .menu-links a');
-
 links.forEach(link => {
     link.addEventListener('click', function (event) {
         event.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
-        const navHeight = document.querySelector('nav').offsetHeight;
+        const navHeight = window.innerWidth < 600 ? 10 : 17; // 10vh for small screens, 17vh for larger screens
+        const navHeightPx = (navHeight * window.innerHeight) / 100; // Convert vh to px
 
         window.scrollTo({
-            top: targetElement.offsetTop - navHeight,
+            top: targetElement.offsetTop - navHeightPx,
             behavior: 'smooth'
         });
     });
 });
+
 
 
 document.addEventListener('DOMContentLoaded', (event) => {

@@ -336,12 +336,12 @@ nav, .nav-links{
     }
 
     #desktop-nav{
-            display: none;
-        }
+        display: none;
+    }
 
     #hamburger-nav{
-            display: flex;
-        }
+        display: flex;
+    }
 }
 
 @media screen and (max-width: 1200px) {
