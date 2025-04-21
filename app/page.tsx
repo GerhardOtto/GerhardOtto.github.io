@@ -10,8 +10,8 @@ export default function Home() {
       <About />
       <Education />
       <TechStack />
-      <WorkHistory />
-      <Projects />
+      {/* <WorkHistory />
+      <Projects /> */}
     </>
   );
 }

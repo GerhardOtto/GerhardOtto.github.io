@@ -13,6 +13,7 @@ import {
 } from "./ui/sheet";
 import { Menu } from "lucide-react";
 import { Button } from "./ui/button";
+import { Badge } from "./ui/badge";
 
 const navigationItems = [
   { text: "Education", href: "#education" },
@@ -25,32 +26,32 @@ export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <header className="hidden md:flex flex-wrap lg:flex-nowrap justify-between mx-10 my-5">
-        <span className="text-3xl font-bold mx-auto pb-5">Gerhard Otto</span>
-        <div className="mx-auto">
-          <Menubar className="space-x-5 px-5 text-nowrap">
+
+<Badge variant={"default"} className="text-3xl font-bold my-5 mx-auto flex">Gerhard Otto</Badge>
+      {/* <header className="hidden sm:flex flex-wrap justify-between mx-10 my-5">
+        <Badge variant="outline" className="text-3xl font-bold sm:mx-auto lg:mx-0 mb-5">Gerhard Otto</Badge>
+          <Menubar className="space-x-5 text-nowrap sm:mx-auto lg:mx-0 mt-1 px-5 ">
             <MenubarMenu>
               <Link href={"#education"}>Education</Link>
             </MenubarMenu>
             <Separator orientation="vertical" />
             <MenubarMenu>
-              <Link href={"#stack"}>Tech Stack</Link>
+              <Link href={"#tech-stack"}>Tech Stack</Link>
             </MenubarMenu>
             <Separator orientation="vertical" />
             <MenubarMenu>
-              <Link href={"#history"}>Work History</Link>
+              <Link href={"#work-history"}>Work History</Link>
             </MenubarMenu>
             <Separator orientation="vertical" />
             <MenubarMenu>
-              <Link href={"#projects"}>Notable Projects</Link>
+              <Link href={"#projects"}>Projects</Link>
             </MenubarMenu>
           </Menubar>
-        </div>
-      </header>
+      </header> */}
 
       {/* Hamburger */}
-      <header className="md:hidden flex items-center justify-between w-full px-10 my-5">
-        <div className="text-3xl">Gerhard Otto</div>
+      {/* <header className="sm:hidden flex items-center justify-between w-full px-10 my-5">
+        <Badge variant="outline" className="text-3xl font-bold">Gerhard Otto</Badge>
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger>
             <Menu />
@@ -70,7 +71,7 @@ export const Header = () => {
             </nav>
           </SheetContent>
         </Sheet>
-      </header>
+      </header> */}
     </>
   );
 };
